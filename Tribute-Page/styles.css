@@ -1,0 +1,162 @@
+*{
+  margin:0;
+  box-sizing:border-box;
+}
+body{
+  background-color:rgb(88, 81, 81);
+}
+
+header{
+  position:fixed;
+  background-color: black;
+  display:flex;
+  flex-direction: column;
+  top:0;
+  bottom:0;
+  color:white;
+  width: 17vw;
+  z-index: 2;
+  overflow: hidden;
+}
+
+#navbar{
+  display: flex;
+  flex-direction:column;
+  margin:10px auto;
+  padding: 10px;
+  font-size: 1.2rem;
+  color:white;
+}
+#navbar > a{
+  text-decoration: none;
+  line-height: 20px;
+  color: white;
+  border: 5px solid white;
+  border-radius: 10px;
+  transition-delay: 0.2s;
+  transition-duration: 1s;
+  transition-property: color, background;
+  padding:10px !important;
+  text-align: center;
+  cursor:pointer;
+  width:15vw;
+  margin:10px auto;
+}
+#navbar > a.nav-link:hover{
+  color: black;
+  background: white;
+}
+#navbar > a.nav-link:active{
+  border-color: white;
+  transform: scale(1.1);
+}
+
+#align-left{
+  margin-left: calc(100vw - 82vw);
+  color: white;
+  background-color: rgb(41, 36, 36);
+  padding: 20px;
+}
+
+#title{
+  font-size:3rem;
+  text-align: center;
+  font-family: "Roboto Slab"
+}
+
+hr{
+  margin-bottom: 3vmax;
+  height: 7px;
+  background-color: white;
+}
+
+h3{
+  font-size:1.6rem;
+  position: sticky;
+  top: -1px;
+  background: black;
+  padding: 1px 4px;
+  font-family: "Nunito Sans", serif;
+  border-bottom: 1px solid white;
+}
+#content{
+  border-bottom: 3px solid white;
+  border-radius: 0px 20px 100px 0px;
+  border-right: 3px solid white;
+  margin-bottom: 5vh;
+}
+h4{
+  margin-top: 1.3vmax;
+  margin-bottom: 1vmin;
+  font-size: 1.3rem;
+}
+p{
+  margin-bottom: 2vmax;
+  
+  font-size: 110%;
+}
+#img-div{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+#image{
+  width:50vw;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.link-div{
+  background: white;
+  text-align:center;
+  margin-bottom: -15px;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+.lob{
+/*   text-decoration: none; */
+  color: black;
+  transition: transform 1s ease-in-out;
+}
+
+.lob:hover {
+  color: red;
+  transform: scale(1.3);
+}
+
+@media (max-width:700px){
+  header{
+    width:20vw;
+  }
+  #navbar > a{
+    width: 17vw;
+  }
+  #align-left{
+    margin-left: calc(100vw - 79vw);
+  }
+  #content{
+    border-radius: 0;
+  }
+}
+
+@media (max-width:500px){
+  header{
+    width:0;
+    height: 0;
+    z-index: -13;
+  }
+  navbar{
+    height: 0;
+    width: 0;
+  }
+  #align-left{
+    width:100vw;
+    margin-left:0;
+  }
+  #content{
+    border-radius: 0;
+  }
+}
