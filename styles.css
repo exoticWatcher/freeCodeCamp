@@ -1,0 +1,156 @@
+*{
+   margin:0;
+   border:0;
+   padding:0;
+   box-sizing: border-box;
+} 
+
+body{
+  animation: animate 5s infinite;
+/*   background: rgb(70,70,70); */
+  color:white;
+}
+
+@keyframes animate{
+  0%{background:black}
+  10%{background: rgb(20,50,50);}
+  20%{background: black;}
+  40%{background: rgb(20,70,70)}
+  60%{background:black;}
+  80%{background: rgb(20,50,50)}
+  100%{background: black}
+}
+
+.yo{
+  background: none;
+  width: 700px;
+  padding: 0 30px;
+  margin: 45px auto;
+  margin-bottom: 30px;
+}
+#title, #description{
+  text-align:center;
+}
+
+#survey-form{
+  width: 700px;
+  background-color: black;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+label{
+  width:100%;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+input{
+  padding: 0;
+  margin:0;
+  border:0;
+}
+#name, #email, #number, #age, .select{
+  min-width: 100%;
+  min-height: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 8vh;
+  color: #505050;
+}
+
+fieldset{
+  text-align: left;
+  margin-bottom: 8vh;
+  border: none;
+  padding: 0;
+}
+legend{
+  font-size: 1.2em;
+  border-bottom: 1px solid white;
+  margin-bottom: 2vh;
+}
+
+input[type="radio"]{
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]{
+  margin-bottom: 10px;
+}
+
+#textarea-label{
+  margin-bottom: 8vh !important;
+}
+
+#textarea{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height: 120px;
+  margin-top: 2vh;
+  color: linear-gradient(black,black,grey,black);
+  border-radius: 10px 0;
+  border: none;
+  background:white;
+  font-size: 0.9rem;
+  margin-bottom: 12vh;
+}
+
+#submit{
+  width:100%;
+  min-height: 10vh;
+  max-height: 700px;
+  border: none;
+  background-color: rgb(12,180,34);
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: white;
+  font-style: bold;
+  transition: transform 1s;
+}
+
+#submit:hover{
+  transform: scale(1.052);
+  background: rgb(12,210,5);
+}
+
+.select{
+  appearance: none;
+  width: 100%;
+/*   color: #495057; */
+  color: #505050;
+  border: 1px solid white;
+}
+
+
+.select-wrapper{
+  position:relative;
+  color: black;
+}
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 10px;
+  right: 1px;
+  position: absolute;
+}
+
+@media (max-width:700px){
+  .yo{
+    width: 80vw;
+  }
+  #survey-form{
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px){
+  .yo{
+    width: 100%;
+  }
+  #survey-form{
+    width: 100vw;
+  }
+}
