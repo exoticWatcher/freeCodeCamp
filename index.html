@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset='utf-8'>
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <div class="yo">
+    <h1 id='title'>Survey Form</h1>
+    <p id="description">Take part in this survey about <em>programming!!</em></p>
+  </div>
+  <!-- Form Begins Here -->
+
+  <form action="" id="survey-form">
+    <label for="name" id="name-label"> Name<br>
+      <input type="text" id="name" placeholder="Name" required>
+    </label> <br>
+
+    <label for="email" id="email-label"> Email <br>
+      <input type="email" id="email" placeholder="E-mail" required>
+    </label> <br>
+
+    <label for="number" id="number-label"> Experience (<i>in programming</i>) <br>
+      <input type="number" id="number" placeholder="Experience" min=1 max=70 required>
+    </label><br>
+
+    <label for="age" id="age-label"> Age <br>
+      <input type="number" id="age" placeholder="Age" min=16 max=100 required>
+    </label><br>
+
+    <label for="">Preferred Programming Language
+      <div class="select-wrapper">
+        <select name="pref-program-lang" class="select" id="dropdown">
+          <option value="" selected disabled>Choose an option</option>
+
+          <option value="javascr">Javascript</option>
+
+          <option value="html-css">HTML / CSS</option>
+
+          <option value="python">Python</option>
+
+          <option value="java">Java</option>
+
+          <option value="c-lang">C / C# / C++</option>
+
+          <option value="sql">SQL / related</option>
+
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </label>
+
+    <!-- Radio Buttons -->
+    <fieldset>
+      <legend>What is your experience level?</legend>
+
+      <label for="low-exp">
+        <input type="radio" id="low-exp" name="exp" value="low-exp"> Low (1-4 years)
+      </label><br>
+
+      <label for="med-exp">
+        <input type="radio" id="med-exp" name="exp" value="med-exp"> Medium (5-10 years)
+      </label><br>
+
+      <label for="high-exp">
+        <input type="radio" id="high-exp" name="exp" value="high-exp"> High (10 and above)
+      </label>
+    </fieldset>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Choose a language you would like to learn</legend>
+
+      <label for="html-css">
+        <input type="checkbox" id="html-css" name="lang-learn" value="html-css"> HTML & CSS
+      </label><br>
+
+      <label for="jscript">
+        <input type="checkbox" id="jscript" name="lang-learn" value="jscript"> JavaScript
+      </label><br>
+
+      <label for="other">
+        <input type="checkbox" id="other" name="lang-learn" value="other"> Other
+      </label>
+    </fieldset>
+
+    <label for="textarea" id="textarea-label"> Enter Comments or Suggestion
+      <textarea name="more-info" id="textarea" placeholder="Type Here"></textarea></label>
+
+    <input id="submit" type="submit">
+  </form>
+</body>
+
+</html>
